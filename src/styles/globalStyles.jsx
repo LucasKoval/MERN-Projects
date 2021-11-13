@@ -6,19 +6,19 @@ import 'react-toastify/dist/ReactToastify.css'
 
 export const lightTheme = {
   bgColor: {
-    main: '#FFF',
-    header: '#F2F6F7',
-    sidebar: '#F2F6F7',
-    footer: '#F2F6F7',
+    main: 'linear-gradient(-225deg, #8e9eab, #f2f2f2, #dbdbdb, #eaeaea);',
+    header: '#eaeaea',
+    sidebar: '#eaeaea',
+    footer: '#eaeaea',
     toast: '#0F3942',
   },
   fontColor: {
-    main: '#002E39',
+    main: '#203A43',
     header: '#0F3942',
     sidebar: '#0F3942',
     footer: '#0F3942',
-    menu: '#00b4db',
-    author: '#00b4db',
+    menu: '#00a9cd',
+    author: '#00a9cd',
     toast: '#D8D9D3',
   },
   color: {
@@ -31,7 +31,7 @@ export const lightTheme = {
     lightBlue: '#00b4db',
     aqua: '#24CDCA',
     yellow: '#FFC677',
-    orange: '#FF6962',
+    coral: '#FF6962',
   },
   device: {
     tablet: '768px',
@@ -41,10 +41,10 @@ export const lightTheme = {
 
 export const darkTheme = {
   bgColor: {
-    main: '#002E39',
-    header: '#0F3942',
-    sidebar: '#0F3942',
-    footer: '#0F3942',
+    main: 'linear-gradient(-225deg, #2C5364, #203A43, #0F2027)',
+    header: '#0F2027',
+    sidebar: '#0F2027',
+    footer: '#0F2027',
     toast: '#F2F6F7',
   },
   fontColor: {
@@ -66,7 +66,7 @@ export const darkTheme = {
     lightBlue: '#00b4db',
     aqua: '#24CDCA',
     yellow: '#FFC677',
-    orange: '#FF6962',
+    coral: '#FF6962',
   },
   device: {
     tablet: '768px',
@@ -163,7 +163,7 @@ export const BodyContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.fontColor.main};
-  background-color: ${(props) => props.theme.bgColor.main};
+  background-image: ${(props) => props.theme.bgColor.main};
   transition: all 0.5s ease;
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
     min-height: 100vh;
@@ -183,6 +183,12 @@ export const MainSection = styled.main`
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
     padding: 0 1rem;
     padding-top: 4.5rem;
+  }
+  &.appointmentManager {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    font-family: sans-serif;
   }
 `
 

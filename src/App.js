@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalProvider } from './services/context/GlobalContext'
 import Home from './pages/home'
 import Error from './pages/error'
-import Page1 from './pages/page1'
+import AppointmentManager from './pages/appointmentManager'
 import Page2 from './pages/page2'
 import { GlobalStyle, ToastStyledContainer, lightTheme, darkTheme } from './styles/globalStyles'
 
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
-          <Route path="/page1" element={<Page1 />} />
+          <Route path="/appointment-manager" element={<AppointmentManager />} />
           <Route path="/page2" element={<Page2 />} />
         </Routes>
       </GlobalProvider>

@@ -101,9 +101,9 @@ export const ImageContainer = styled.div`
 
     ul.menu {
       position: absolute;
-      width: 300px;
+      width: fit-content;
       margin: 36px 0 0 -50px;
-      padding: 25px 50px;
+      padding: 25px 80px 25px 50px;
       box-shadow: rgb(139 148 158) 2px 2px 5px -2px;
       border-bottom-right-radius: 10px;
       background-color: ${(props) => props.theme.bgColor.header};
@@ -114,6 +114,7 @@ export const ImageContainer = styled.div`
       -webkit-font-smoothing: antialiased;
 
       a {
+        width: max-content;
         display: flex;
         align-items: center;
         :focus {
@@ -126,8 +127,8 @@ export const ImageContainer = styled.div`
       }
 
       @media (max-width: ${({ theme }) => theme.device.mobile}) {
-        width: 250px;
         margin: 20px 0 0 -50px;
+        padding: 20px 25px 20px 50px;
       }
 
       li {
