@@ -64,7 +64,6 @@ const Form = ({ saveAppointment }) => {
         <Input
           type="text"
           name="name"
-          className="u-full-width"
           placeholder="Nombre y apellido del paciente"
           value={name}
           onChange={handleChange}
@@ -74,7 +73,6 @@ const Form = ({ saveAppointment }) => {
         <Input
           type="number"
           name="dni"
-          className="u-full-width"
           placeholder="DNI del paciente"
           value={dni}
           onChange={handleChange}
@@ -84,7 +82,6 @@ const Form = ({ saveAppointment }) => {
         <Input
           type="text"
           name="healthInsurance"
-          className="u-full-width"
           placeholder="Obra Social del paciente"
           value={healthInsurance}
           onChange={handleChange}
@@ -94,43 +91,27 @@ const Form = ({ saveAppointment }) => {
         <Input
           type="number"
           name="telephone"
-          className="u-full-width"
           placeholder="Teléfono del paciente"
           value={telephone}
           onChange={handleChange}
         />
 
         <Label>Fecha</Label>
-        <Input
-          type="date"
-          name="date"
-          className="u-full-width"
-          value={date}
-          onChange={handleChange}
-        />
+        <Input type="date" name="date" value={date} onChange={handleChange} />
 
         <Label>Hora</Label>
         <Input
           type="time"
           name="time"
-          className="u-full-width"
           placeholder="Apellido del paciente"
           value={time}
           onChange={handleChange}
         />
 
         <Label>Motivo de consulta</Label>
-        <Textarea
-          name="reason"
-          className="u-full-width"
-          placeholder="Descripción del motivo de la consulta"
-          value={reason}
-          onChange={handleChange}
-        ></Textarea>
+        <Textarea name="reason" value={reason} onChange={handleChange}></Textarea>
 
-        <Button type="submit" className="u-full-width button-primary">
-          Agendar turno
-        </Button>
+        <Button type="submit">Agendar turno</Button>
       </form>
     </>
   )

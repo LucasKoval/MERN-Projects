@@ -5,13 +5,20 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 2rem;
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      flex-flow: column;
+      justify-content: center;
+    }
   }
   &.appointment {
+    width: 100%;
     padding: 2rem;
+    padding-top: 1rem;
     background: white;
     border-bottom: 1px solid #e1e1e1;
-    color: black;
     p {
+      color: #203a43;
       font-weight: bold;
       margin-bottom: 0.8rem;
       span {
@@ -37,16 +44,20 @@ export const SubContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
     align-self: baseline;
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      padding: 0 1.5rem;
+      width: 100%;
+    }
   }
 `
 
 export const Button = styled.button`
+  width: 100%;
   height: 40px;
-  width: 150px;
-  border-radius: 32px;
+  border-radius: 5px;
   color: #ffffff;
   background: ${({ theme }) => theme.color.lightBlue};
-  border: 1px solid ${({ theme }) => theme.color.blue};
+  border: none;
   align-self: flex-end;
   font-style: normal;
   font-weight: 600;
@@ -54,9 +65,10 @@ export const Button = styled.button`
   line-height: 20px;
   text-align: center;
   box-sizing: border-box;
+  cursor: pointer;
   &:hover {
-    transform: scale(1.1);
-    transition: all 0.5s;
+    background: #009dc0;
+    transition: all 0.4s ease;
   }
   &:focus,
   &:focus-visible {
@@ -71,19 +83,18 @@ export const Button = styled.button`
   }
   &.delete {
     background: ${({ theme }) => theme.color.coral};
-    border: 1px solid ${({ theme }) => theme.color.coral};
-    margin-right: 18px;
-  }
-  @media (max-width: 600px) {
-    width: 100%;
-    margin-bottom: 18px;
-    &.normalSize {
-      width: 198px;
-      margin-bottom: 0;
+    border: none;
+    margin-top: 0.5rem;
+    &:hover {
+      background: #e55c56;
+      transition: all 0.4s ease;
     }
-    &.white {
-      margin-bottom: 0.5rem;
-      margin-right: 0;
+  }
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    &.delete {
+      margin-bottom: 0;
     }
   }
 `
@@ -95,44 +106,69 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-family: 'Staatliches', cursive;
   letter-spacing: 1px;
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    padding: 0 1rem;
+  }
 `
 export const Subtitle = styled.h2`
-  margin: 2rem 0;
-
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Staatliches', cursive;
   letter-spacing: 1px;
 `
 
-export const Label = styled.label``
+export const Label = styled.label`
+  font-weight: bold;
+`
 
 export const Input = styled.input`
   width: 100%;
   height: 38px;
   padding: 6px 10px;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
   background-color: #fff;
   border: 1px solid #d1d1d1;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
+  :focus {
+    outline: none;
+    border: 1px solid ${(props) => props.theme.fontColor.author};
+  }
 `
 
 export const Textarea = styled.textarea`
+  width: 100%;
+  height: 4rem;
   padding: 6px 10px;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
   background-color: #fff;
   border: 1px solid #d1d1d1;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
+  :focus {
+    outline: none;
+    border: 1px solid ${(props) => props.theme.fontColor.author};
+  }
 `
 
 export const AlertMsg = styled.p`
+  margin-top: 0;
+  margin-bottom: 1rem;
   background-color: white;
   color: red;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-align: center;
   font-family: 'Staatliches', cursive;
+  border-radius: 5px;
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    font-size: 1.3rem;
+  }
 `
