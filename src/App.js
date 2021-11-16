@@ -17,9 +17,9 @@ function App() {
       <GlobalProvider themeStyle={theme} setThemeStyle={setTheme}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<Error />} />
           <Route path="/appointment-manager" element={<AppointmentManager />} />
           <Route path="/page2" element={<Page2 />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </GlobalProvider>
       <ToastStyledContainer

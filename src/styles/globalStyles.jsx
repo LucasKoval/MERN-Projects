@@ -281,7 +281,7 @@ export const Textarea = styled.textarea`
   outline: none;
   font-size: 14px;
   line-height: 140.4%;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.color.darkGrey};
   padding: 10px 12px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -315,13 +315,12 @@ export const CustomSelect = styled(Select)`
   font-weight: normal;
   font-size: 14px;
   line-height: 140.4%;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.color.darkGrey};
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
-
   &:disabled {
     background-color: #f2f2f2;
     color: #999999;
@@ -427,7 +426,7 @@ export const Button = styled.button`
     background: #ffffff;
     margin-right: 18px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
     width: 100%;
     margin-bottom: 18px;
     &.normalSize {
@@ -441,7 +440,7 @@ export const Button = styled.button`
   }
 `
 
-export const ErrorContainer = styled.div`
+export const ErrorPageContainer = styled.div`
   padding: 7rem 0 2rem 0;
   img {
     width: 480px;
