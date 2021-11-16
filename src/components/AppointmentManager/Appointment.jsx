@@ -26,10 +26,7 @@ const Appointment = ({ appointment, deleteAppointment }) => (
       Motivo de consulta: <span>{appointment.reason}</span>
     </p>
 
-    <Button
-      className="button delete u-full-width"
-      onClick={() => deleteAppointment(appointment.id)}
-    >
+    <Button className="delete" onClick={() => deleteAppointment(appointment.id)}>
       Eliminar
     </Button>
   </Container>

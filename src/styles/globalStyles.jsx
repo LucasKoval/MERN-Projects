@@ -10,7 +10,7 @@ export const lightTheme = {
     header: '#eaeaea',
     sidebar: '#eaeaea',
     footer: '#eaeaea',
-    toast: '#0F3942',
+    toast: '#203A43',
   },
   fontColor: {
     main: '#203A43',
@@ -45,7 +45,7 @@ export const darkTheme = {
     header: '#0F2027',
     sidebar: '#0F2027',
     footer: '#0F2027',
-    toast: '#F2F6F7',
+    toast: '#E8ECEE',
   },
   fontColor: {
     main: '#E8ECEE',
@@ -54,7 +54,7 @@ export const darkTheme = {
     footer: '#E8ECEE',
     menu: '#FFC677',
     author: '#FFC677',
-    toast: '#0F3942',
+    toast: '#203A43',
   },
   color: {
     darkGrey: '#333333',
@@ -87,7 +87,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-h1, h2, h3, h4, p, span, strong, input, select, option, button, div, a {
+h1, h2, h3, h4, p, span, strong, input, textarea, select, option, button, div, a {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -187,6 +187,7 @@ export const MainSection = styled.main`
   &.appointmentManager {
     margin: 0;
     padding: 0;
+    padding-top: 5.5rem;
     flex-direction: column;
     font-family: sans-serif;
   }

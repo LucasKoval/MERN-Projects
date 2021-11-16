@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Form from '../../components/AppointmentManager/Form'
 import Appointment from '../../components/AppointmentManager/Appointment'
-import { MainSection, PageContainer } from '../../styles/globalStyles'
+import { MainSection } from '../../styles/globalStyles'
 import {
   Title,
   Subtitle,

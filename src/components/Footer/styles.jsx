@@ -34,6 +34,10 @@ export const SubContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  a:hover {
+    transform: translateY(-5px) scale(1.2);
+    transition: all 0.4s ease;
+  }
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
     margin: 0.4rem 0;
     &.developer {
