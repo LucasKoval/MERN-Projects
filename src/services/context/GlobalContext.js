@@ -16,6 +16,7 @@ export const GlobalProvider = ({ children, themeStyle, setThemeStyle }) => {
         <Header />
         {children}
         <Footer />
+        <Footer />
       </BodyContainer>
     </GlobalContext.Provider>
   )
