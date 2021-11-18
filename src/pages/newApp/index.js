@@ -1,12 +1,12 @@
 import React from 'react'
-import { MainSection, PageContainer, Subtitle } from '../../styles/globalStyles'
+import { MainSection, PageContainer /* , Subtitle */ } from '../../styles/globalStyles'
 
 export default function Page2() {
   return (
     <MainSection className="MainSection">
-      <Subtitle>Subtitle</Subtitle>
+      {/* <Subtitle>Subtitle</Subtitle> */}
       <PageContainer className="PageContainer">
-        <h1>Page 2</h1>
+        <h1>New App</h1>
       </PageContainer>
     </MainSection>
   )

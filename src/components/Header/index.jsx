@@ -31,9 +31,13 @@ const Header = () => {
             <IoDocumentTextOutline />
             <li>Appointment Manager</li>
           </Link>
-          <Link to="/page2">
+          <Link to="/expense-record">
             <IoDocumentTextOutline />
-            <li>Page 2</li>
+            <li>Expense Record</li>
+          </Link>
+          <Link to="/new-app">
+            <IoDocumentTextOutline />
+            <li>New App</li>
           </Link>
         </ul>
       </ImageContainer>
